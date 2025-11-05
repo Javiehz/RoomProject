@@ -17,7 +17,7 @@ interface StudentDao {
     suspend fun getAll(): List<Student>
 
     @Query("SELECT * FROM student WHERE id=:id")
-    suspend fun getById(id: Int)
+    suspend fun getById(id: Int): Student
 
     @Update
     suspend fun update(student: Student)
